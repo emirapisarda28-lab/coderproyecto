@@ -1,0 +1,916 @@
+/*font*/
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Math&family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Math&family=Poiret+One&family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+AU+SA:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libertinus+Math&family=Poiret+One&family=Tangerine:wght@400;700&display=swap');
+/*header---------------------------------------------*/
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+nav{ /* es para que el logo  centrado con todo el menu de navegación*/
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-top: 2%;
+}
+
+nav ul{
+    display: flex;
+    align-items: center; 
+    justify-content: space-evenly;/*justify items es para grid*/
+    flex-direction: row;
+    font-size: 17px;
+}
+
+nav li{
+    padding: 2%;
+    
+}
+
+.logo{ /*height no tocamos para no cambiar su proporción*/
+    width: 210px;
+    align-items: flex-start;
+}
+
+.portfolio{
+    background-image:url(../imagenes/inicio6.jpg) ;
+    background-position:center;
+    background-size: 70%;
+}
+
+
+.portfolio .oculto3  {
+    display: block; 
+}
+main .oculto1  { 
+    display: none; 
+} 
+.portfolio .oculto2  { 
+    display: none;
+}
+
+.aboutus{
+    background-image:url(../imagenes/equipo.jpg) ;
+    background-position:center;
+    background-size: 70%;
+}
+
+.aboutus .oculto3{
+    display: block;
+}
+
+.espaciored .oculto1  { 
+    display: none; 
+} 
+
+.aboutus .oculto2{
+    display: none;
+}
+
+.inicio{
+    background-image:url(../imagenes/iniciomobile.jpg) ;
+    background-position:center;
+    background-size: 70%;
+
+}
+
+.inicio .oculto3{
+    display: block;
+}
+
+main .oculto4{
+    display: none;
+}
+
+/*main ya esta arriba*/
+
+.inicio .oculto2{
+    display: none;
+}
+
+
+.agenda{
+    background-image:url(../imagenes/agenda.jpg) ;
+    background-position:center;
+    background-size: 70%;
+}
+
+.agenda .oculto3{
+    display: block;
+}
+
+.tamañoagenda .oculto1{
+    display: none;
+}
+
+.agenda .oculto2{
+    display: none;
+}
+
+header{
+    height: 800px;
+    text-align: center;
+}
+
+
+header h1{
+    padding-top: 3%;
+}
+
+
+a{
+    color: whitesmoke;
+    font-family:"Poiret One", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+
+
+p, ul{ /*más general*/
+    padding-bottom: 2%;
+    font-size: 18px;
+    font-weight: 300;
+    
+}
+
+header p{
+    text-align: center;
+    font-size: 15px;
+    color: whitesmoke;
+    font-family: "Playfair Display", serif;
+}
+
+h1{
+    font-weight: lighter;
+    font-style: italic;
+    text-align: center;
+    font-family: "Tangerine", cursive;
+    font-size: 80px;
+    color: whitesmoke;
+    margin-top: 3%;
+}
+
+
+span{
+    font-weight: lighter;
+    font-size: 1.05rem;
+    display: block;
+    margin-bottom: 0.3rem;
+    padding: 5%;
+}
+
+/*main------------------------------------------------------------*/
+
+
+.parrafou{ /* en el archivo index*/
+    padding: 5%;
+    margin-top: 6%;
+    margin-left: 4%;
+    margin-right: 4%;
+    font-family: "Lato", sans-serif;;
+    background-color:#7A6B5E;
+    font-weight: 300;
+    text-align: center;
+}
+
+.colores{ /*diferenciar con colores arch index*/ 
+    background-color:#7A6B5E;
+    padding-top: 1%;
+}
+
+.espacio{ /*archivo index, espacio entre los h2*/
+    padding-top: 1%;
+}
+
+.sectores{ /*flex para acomodas las imagenes de los servicios*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    width: 100%;
+}
+
+.min-sec{
+    padding: 2%;
+    margin: 2%;
+    border: whitesmoke 2px solid;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.min-sec p {
+    font-size: 1,5rem;
+    line-height: 1.6;
+}
+
+.min-sec img{
+    width: 350px;
+}
+
+
+.espaciored{ /*archivo about*/
+   padding-left: 4%;
+   padding-right: 4%;
+   text-align: justify;
+}
+
+.pad1{
+    padding: 2%;
+}
+
+.pad2{
+    padding: 2%;
+}
+.abajocolor{
+    background-color: #7A6B5E;
+    padding-bottom: 2%;
+    padding-right: 2%;
+    padding-left: 2%;
+    
+}
+
+.equipocolor{ /*archivo about*/
+    background-color: #7A6B5E;
+    margin-bottom: 2%;
+    display: grid;
+    grid-template-areas:
+    "titulo titulo"
+    "img1 img2"
+    "texto texto";
+    grid-template-columns: 45% 45%;
+    grid-template-rows: 100px 500px 100px;
+    justify-content: center;
+    justify-items: self-start;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 4%;
+}
+
+.titulo{
+    grid-area: titulo;
+}
+
+.img1{
+    grid-area: img1;
+}
+
+.img2{
+    grid-area: img2;
+}
+
+.texto{
+    grid-area: texto;
+    padding-top: 6%;
+    padding-bottom: 6%;
+}
+
+
+.equipocolor img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/*archivo portfolio*/
+
+.arreglo{ /*archivo portfolio*/
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: center;
+    gap: 30px;
+    padding: 4%;
+}
+
+.borde{
+    border-top: whitesmoke 2px solid;
+    border-bottom: whitesmoke 2px solid;
+    padding: 2%;
+}
+
+.arreglo a {
+    letter-spacing: 1px;
+}
+
+/*GRID DEL PORTFOLIO*/
+.gridport{
+  display: grid;
+  grid-template-areas:
+    "estilo estilo"
+    "rus-img ele-img"
+    "rus-cap ele-cap"
+    "boho-img int-img"
+    "boho-cap int-cap"
+    "momentos momentos"
+    "cer-img det-img"
+    "cer-cap det-cap"
+    "mesas mesas"
+    "mesa-img mesa-img"
+    "mesa-cap mesa-cap";
+  gap: 1.5rem;
+  grid-template-columns: 45% 45%;
+  grid-template-rows: auto auto auto auto auto auto auto auto auto min-content auto;
+  align-items: center;
+  justify-content: center;
+  background-color:#7A6B5E;
+}
+
+/* Áreas */
+.estilo   { grid-area: estilo; }
+.momentos { grid-area: momentos; }
+.mesas    { grid-area: mesas; }
+
+.carruselrus   { grid-area: rus-img; }
+.rus-cap       { grid-area: rus-cap; }
+
+.carruselele   { grid-area: ele-img; }
+.ele-cap       { grid-area: ele-cap; }
+
+.carruselboho  { grid-area: boho-img; }
+.boho-cap      { grid-area: boho-cap; }
+
+.carruselint   { grid-area: int-img; }
+.int-cap       { grid-area: int-cap; }
+
+.carruselcerem { grid-area: cer-img; }
+.cer-cap       { grid-area: cer-cap; }
+
+.carruseldeta  { grid-area: det-img; }
+.det-cap       { grid-area: det-cap; }
+
+.carruselmesas {
+    grid-area: mesa-img; 
+
+}
+
+.mesa-cap{ 
+    grid-area: mesa-cap; 
+    padding-top: 0%
+}
+
+/* Normalización carruseles */ 
+
+
+.ratio {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
+.gridport .carousel,.gridport .carousel-inner, .gridport .carousel-item {
+  height: 100%;
+}
+
+.gridport .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Estilos opcionales para títulos */
+.gridport h2 {
+  margin: 0.5rem 0;
+}
+
+.gridport h3 {
+  margin-bottom: 4%;
+  text-align: center;
+}
+
+.carruselmesas {
+  max-width: 60%;       /* más chico (ejemplo: 70% del ancho de su celda) */
+  max-height: 92%;
+  justify-self: center;  /*centrado dentro de la grilla */
+}
+
+/*-----------------------------fin de portfolio------------------------------------------------------------------------------*/
+
+.tamañoagenda{ /*tamaño del main de la agenda*/
+    width: 100%;
+    border-top: whitesmoke 3px solid;
+    border-bottom: whitesmoke 3px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    padding: 10%;
+}
+
+form{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+
+
+ul{
+    list-style: none;
+}
+
+main{ 
+    overflow: auto;
+    background-color:#B3A696;
+    font-family: "Lato", sans-serif;;
+    color: whitesmoke;
+    text-align: center;
+}
+
+
+
+.distintocolor{
+    background-color: #7A6B5E;
+}
+
+
+h2{
+    padding: 2%;
+    font-family: "Playfair Display", serif;
+    font-weight: lighter;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    padding-top: 6%;
+}
+
+h3{
+    font-family: "Playfair Display", serif;
+    font-size: 1,5rem;
+    letter-spacing: 1px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-weight: lighter;
+
+}
+
+
+
+/*footer----------------------------------------------*/
+footer{
+    color: whitesmoke;
+    background-color: #292E1E;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+
+}
+
+footer div{
+    padding-bottom: 5%;
+}
+
+footer img{
+    width: 50px;;
+}
+
+
+
+
+/* Responsive: en pantallas chicas, 1 columna */
+@media (max-width: 480px){
+    .portfolio{
+        background-image: none;
+    }
+
+    .portfolio .oculto3{
+        display: none;
+    }
+
+    .portfolio .oculto{
+        display: none;
+    }
+
+
+    .portfolio .oculto2{ /* es para que el logo  centrado con todo el menu de navegación*/
+        display: block;
+    }
+
+
+    .portfolio .oculto2 ul{
+        display: flex;
+        padding: 0.5%;
+        gap: 5px;
+        padding-top: 1%;
+        align-items: center; 
+        justify-content: space-evenly;/*justify items es para grid*/
+        flex-direction: row;
+        font-size: 8px;
+        text-align: justify;
+    }
+
+    .portfolio .oculto2 a{
+        color: #7A6B5E;   /* pisa el a{color:whitesmoke} global */
+        text-decoration: none;
+
+    }
+
+    main .oculto1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../imagenes/portfolio2.jpg);
+        background-size: cover;
+        min-height: 500px;
+        gap: 0.75 rem;
+        background-position:center;
+        color: whitesmoke;
+        text-align: center;
+        font-family: "Playfair Display", serif;
+    }
+
+    main .oculto1 h1{
+        color: whitesmoke;
+        text-align: center;
+        font-size: 50px;
+    }
+
+    main .oculto1 p{
+        font-size: 10px;
+    }
+    
+
+    .arreglo{
+        font-size: 12px;
+    }
+
+    .gridport {
+        grid-template-columns: 45%;
+        grid-template-areas:
+        "estilo"
+        "rus-img" "rus-cap"
+        "ele-img" "ele-cap"
+        "boho-img" "boho-cap"
+        "int-img" "int-cap"
+        "momentos"
+        "cer-img" "cer-cap"
+        "det-img" "det-cap"
+        "mesas"
+        "mesa-img" "mesa-cap";
+        justify-content: center;
+    }
+
+
+    .carruselmesas{
+        max-width: 100%;       
+        max-height: 100%;
+        justify-self: center; /*centrado dentro de la grilla*/
+    }
+
+    .gridport h2 {
+        font-size: 18px;
+    }
+
+    .gridport h3 {
+        font-size: 15px;
+    }
+
+
+    /*--------------------------------------portfolio----------------------------------------------------------------------------*/
+    
+    .aboutus{
+        background-image: none;
+    }
+
+    .aboutus .oculto3{
+        display: none;
+    }
+
+    .aboutus .oculto{
+        display: none;
+    }
+
+    .aboutus .oculto2{ /* es para que el logo  centrado con todo el menu de navegación*/
+        display: block;
+    }
+
+    .aboutus .oculto2 ul{
+        display: flex;
+        gap: 5px;
+        padding-top: 1%;
+        align-items: center; 
+        justify-content: space-evenly;/*justify items es para grid*/
+        flex-direction: row;
+        font-size: 8px;
+        text-align: justify;
+    }
+
+    .aboutus .oculto2 a{
+        color: #7A6B5E;   /* pisa el a{color:whitesmoke} global */
+        text-decoration: none;
+
+    }
+
+    .espaciored .oculto1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../imagenes/equipo.jpg);
+        background-size: cover;
+        min-height: 500px;
+        gap: 0.75 rem;
+        background-position:center;
+        color: whitesmoke;
+        text-align: center;
+        font-family: "Playfair Display", serif;
+    }
+
+    .espaciored .oculto1 h1{
+        color: whitesmoke;
+        text-align: center;
+        font-size: 50px;
+    }
+
+    .espaciored .oculto1 p{
+        font-size: 10px;
+    }
+    
+    .espaciored{ 
+        padding-left: 0%;
+        padding-right: 0%;
+        text-align: justify;
+    }
+
+    .pad1, .pad2{
+        padding: 8%;
+    }
+
+    .abajocolor{
+        background-color: #7A6B5E;
+        padding: 8%;
+
+    }
+    .espaciored h2{
+        font-size: 15px;
+    }
+
+    .espaciored ul{
+        font-size: 13px;
+    }
+
+    .espaciored p{
+        font-size: 13px;
+    }
+    .equipocolor{ 
+        background-color: #7A6B5E;
+        margin-bottom: 2%;
+        display: grid;
+        grid-template-areas:
+        "titulo titulo"
+        "img1 img1"
+        "img2 img2"
+        "texto texto";
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 100px 500px 500px 100px;
+        justify-content: center;
+        justify-items: self-start;
+        align-items: center;
+        gap: 1.5rem;
+        padding-top: 1%;
+        padding-right: 4%;
+        padding-left: 4%;
+    }*/
+
+    /*---------------------------------------------------------------------------about us--------------------------------------------------------------*/
+
+
+
+
+
+    header.inicio{
+        background-image: none; 
+    }
+
+    .inicio .oculto3{
+        display: none;
+    }
+
+    .inicio .oculto{
+        display: none;
+    }
+
+
+    .inicio .oculto2{ /* es para que el logo  centrado con todo el menu de navegación*/
+        display: block;
+        background-image: none;
+    }
+
+
+    .inicio .oculto2 ul{
+        display: flex;
+        padding: 0.5%;
+        gap: 5px;
+        padding-top: 1%;
+        align-items: center; 
+        justify-content: space-evenly;/*justify items es para grid*/
+        flex-direction: row;
+        font-size: 8px;
+        text-align: justify;
+    }
+
+    .inicio .oculto2 a{
+        color: #7A6B5E;   /* pisa el a{color:whitesmoke} global */
+        text-decoration: none;
+
+    }
+
+    main .oculto4{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../imagenes/iniciomobile.jpg);
+        background-size: cover;
+        min-height: 500px;
+        gap: 0.75 rem;
+        background-position:center;
+        color: whitesmoke;
+        text-align: center;
+        font-family: "Playfair Display", serif;
+    }
+
+    main .oculto4 h1{
+        color: whitesmoke;
+        text-align: center;
+        font-size: 50px;
+    }
+
+    main .oculto4 p{
+        font-size: 10px;
+    }
+
+    .parrafou{
+        font-size: 13px;
+    }
+
+    .sectores{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5 rem;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .min-sec{
+        padding: 4%;
+        margin: 6%;
+        border: whitesmoke 2px solid;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 13px;
+    }
+
+    .min-sec span{
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .min-sec img{
+        width: 150px;
+    }
+
+    .mobile{
+        font-size: 15px;
+    }
+
+
+/*---------------------------------------------------------------------index-------------------------------------------------------------------------------------*/
+    .agenda{
+        background-image: none;
+    }
+
+    .agenda .oculto3{
+        display: none;
+    }
+
+    .agenda .oculto{
+        display: none;
+    }
+
+    .agenda .oculto2{ /* es para que el logo  centrado con todo el menu de navegación*/
+        display: block;
+    }
+
+    .agenda{
+        padding: 0%;
+        margin: 0%;
+    }
+
+    .agenda .oculto2 ul{
+        display: flex;
+        gap: 5px;
+        padding-top: 1%;
+        align-items: center; 
+        justify-content: space-evenly;/*justify items es para grid*/
+        flex-direction: row;
+        font-size: 8px;
+        text-align: justify;
+        
+    }
+
+    .agenda .oculto2 ul{
+        display: flex;
+        gap: 5px;
+        padding-top: 1%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        font-size: 8px;
+        text-align: justify;
+
+    }
+
+    .agenda .oculto2 a{
+        color: #7A6B5E;   /* pisa el a{color:whitesmoke} global */
+        text-decoration: none;
+    }
+
+    .tamañoagenda{
+        padding: 0%;
+        margin: 0%;
+    }
+
+    .tamañoagenda .oculto1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../imagenes/agenda.jpg);
+        background-size: cover;
+        min-height: 500px;
+        gap: 0.75 rem;
+        background-position:center;
+        color: whitesmoke;
+        text-align: center;
+        font-family: "Playfair Display", serif;
+        width: 100%;
+    }
+
+    .tamañoagenda .oculto1 h1{
+        color: whitesmoke;
+        text-align: center;
+        font-size: 50px;
+    }
+
+    .tamañoagenda .oculto1 p{
+        font-size: 10px;
+    }
+    
+    .tamañoagenda{ 
+        padding-left: 0%;
+        padding-right: 0%;
+        text-align: justify;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        font-size: 15px;
+        padding: 5%;
+    }
+
+    footer{
+        font-size: 12px;
+
+    }
+    footer h2{
+        font-size: 14px;
+    }
+    footer div{
+        padding-bottom: 5%;
+    }
+
+    footer img{
+        width: 30px;;
+    }
+
+
+    
+/*--------------------------------------------------------------para todos----------------------------------------------------------------------------------------*/
+    nav{
+        display:flex;                      /* clave */
+        justify-content:justify;
+        align-items:center;
+        gap:40px;
+        padding-top:2%;
+    }
+
+    .logo{
+        width: 95px;
+        align-items: flex-start;
+    }
+
+
+    header{
+    height: 70px;
+    text-align: center;
+    }
+}
