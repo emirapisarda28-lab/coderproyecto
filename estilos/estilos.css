@@ -914,4 +914,12 @@ footer img{
     height: 70px;
     text-align: center;
     }
+
+    h2{
+        font-size: 15px;
+    }
+    
+    p{
+        font-size: 12px;
+    }
 }
