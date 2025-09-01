@@ -4,3 +4,19 @@
     box-sizing: border-box;
 }
 
+header{
+    nav{
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding-top: 2%;
+
+        ul{
+            display: flex;
+            align-items: center; 
+            justify-content: space-evenly;/*justify items es para grid*/
+            flex-direction: row;
+            font-size: 17px; 
+        }
+    }
+}
