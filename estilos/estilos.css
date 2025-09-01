@@ -124,7 +124,6 @@ header h1{
 
 a{
     color: whitesmoke;
-    font-family:"Poiret One", sans-serif;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
 }
@@ -172,7 +171,6 @@ span{
     margin-top: 6%;
     margin-left: 4%;
     margin-right: 4%;
-    font-family: "Lato", sans-serif;;
     background-color:#7A6B5E;
     font-weight: 300;
     text-align: center;
@@ -417,7 +415,7 @@ ul{
 main{ 
     overflow: auto;
     background-color:#B3A696;
-    font-family: "Lato", sans-serif;;
+    font-family: "Lato", sans-serif;
     color: whitesmoke;
     text-align: center;
 }
