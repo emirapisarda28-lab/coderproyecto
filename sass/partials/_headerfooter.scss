@@ -1,3 +1,5 @@
+@use "variables" as*;
+
 *{
     margin: 0%;
     padding: 0%;
@@ -5,6 +7,8 @@
 }
 
 header{
+    height: 800px;
+    text-align: center;
     nav{
         justify-content: center;
         align-items: center;
@@ -17,6 +21,106 @@ header{
             justify-content: space-evenly;/*justify items es para grid*/
             flex-direction: row;
             font-size: 17px; 
+
+            li{
+                padding: 2%;
+
+                    .logo{
+                        width: 210px;
+                        align-items: flex-start;
+                    }
+                
+            }
         }
     }
+
+    p{
+        text-align: center;
+        font-size: 15px;
+        color: $blanco;
+        font-family: $fonthead;
+    }
+
+    h1{
+        padding-top: 3%;
+    }
+
+}
+
+ a{
+    color: $blanco;
+    font-family: $fontlink;
+    text-decoration: none;
+ }
+
+.portfolio{ 
+  background-image: url(../imagenes/inicio6.jpg); //arreglar navegación
+  background-position: center;
+  background-size: 70%;
+
+  .oculto3{
+    display: block;
+  }
+
+  .oculto2{
+    display: none;
+  }
+}
+
+.aboutus{
+    @extend .portfolio;
+    background-image:url(../imagenes/equipo.jpg) ;
+}
+
+.inicio{
+    @extend .portfolio;
+    background-image:url(../imagenes/iniciomobile.jpg) ;
+}
+
+.agenda{
+    @extend .portfolio;
+    background-image:url(../imagenes/agenda.jpg) ;
+}
+
+a{
+    color: $blanco;
+    font-family: $fontlink;
+    text-decoration: none;
+}
+
+h1{
+    font-weight: lighter;
+    font-style: italic;
+    text-align: center;
+    font-family: $fonth1;
+    font-size: 80px;
+    color: $blanco;
+    margin-top: 3%;
+}
+
+p, ul{ /*más general*/
+    padding-bottom: 2%;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+ul{
+    list-style: none;
+}
+
+/*----------------------------------------------------- footer*/ 
+footer{
+    color: $blanco;
+    background-color: $verde;
+    font-family: $fontlink;
+    font-weight: 300;
+
+    div{
+        padding-bottom: 5%;
+        
+        img{
+            width: 50px;
+        }
+    }
+
 }

@@ -1,0 +1,285 @@
+@use "variables" as*;
+
+
+main{
+    .oculto1{
+        display: none;
+    }
+
+    .oculto4{
+        display: none;
+    }
+
+
+    .parrafou{
+        padding: 5%;
+        margin-top: 6%;
+        margin-left: 4%;
+        margin-right: 4%;
+        background-color: $cremaosc;
+        font-weight: 300;
+        text-align: center; 
+    }
+
+
+    .sectores{ /*flex para acomodas las imagenes de los servicios*/
+        display: flex;
+        justify-content: space-evenly;
+        align-items: stretch;
+        width: 100%;
+        .min-sec{
+            padding: 2%;
+            margin: 2%;
+            border: $blanco 2px solid;
+            flex: 1;
+            flex-direction: column;
+            justify-content: center;
+
+            .colores{ /*diferenciar con colores arch index*/ 
+                background-color: $cremaosc;
+                padding-top: 1%;
+            }
+
+            .espacio{
+                padding-top: 1%;
+            }
+            
+            .sectores{ /*flex para acomodas las imagenes de los servicios*/
+                display: flex;
+                justify-content: space-evenly;
+                align-items: stretch;
+                width: 100%;
+            }
+
+            p{
+                font-size: 1,5rem;
+                line-height: 1.6;  
+            }
+
+            img{
+                width: 350px;    
+            }
+        }
+    }
+
+    /* archivo portfolio */
+
+    .borde{
+        border-top: whitesmoke 2px solid;
+        border-bottom: whitesmoke 2px solid;
+        padding: 2%;    
+
+        .arreglo{
+            display: flex;
+            flex-direction: column;
+            align-items: self-start;
+            justify-content: center;
+            gap: 30px;
+            padding: 4%;    
+           
+            li{
+                a{
+                    letter-spacing: 1px;
+                }
+            }
+        }   
+    }
+
+    .gridport{
+        display: grid;
+        grid-template-areas:
+            "estilo estilo"
+            "rus-img ele-img"
+            "rus-cap ele-cap"
+            "boho-img int-img"
+            "boho-cap int-cap"
+            "momentos momentos"
+            "cer-img det-img"
+            "cer-cap det-cap"
+            "mesas mesas"
+            "mesa-img mesa-img"
+            "mesa-cap mesa-cap";
+        gap: 1.5rem;
+        grid-template-columns: 45% 45%;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto min-content auto;
+        align-items: center;
+        justify-content: center;
+        background-color:$cremaosc;  
+        
+        
+                /* Áreas */
+        .estilo   { grid-area: estilo; }
+        .momentos { grid-area: momentos; }
+        .mesas    { grid-area: mesas; }
+
+        .carruselrus   { grid-area: rus-img; }
+        .rus-cap       { grid-area: rus-cap; }
+
+        .carruselele   { grid-area: ele-img; }
+        .ele-cap       { grid-area: ele-cap; }
+
+        .carruselboho  { grid-area: boho-img; }
+        .boho-cap      { grid-area: boho-cap; }
+
+        .carruselint   { grid-area: int-img; }
+        .int-cap       { grid-area: int-cap; }
+
+        .carruselcerem { grid-area: cer-img; }
+        .cer-cap       { grid-area: cer-cap; }
+
+        .carruseldeta  { grid-area: det-img; }
+        .det-cap       { grid-area: det-cap; }
+
+        .carruselmesas {
+            grid-area: mesa-img; 
+
+        }
+
+        .mesa-cap{ 
+            grid-area: mesa-cap; 
+            padding-top: 0%
+        }
+
+        /* Normalización carruseles */ 
+
+
+        .ratio {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+
+        .carousel, .carousel-inner,.carousel-item {
+            height: 100%;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Estilos opcionales para títulos */
+        h2 {
+            margin: 0.5rem 0;
+        }
+
+        h3 {
+            margin-bottom: 4%;
+            text-align: center;
+        }
+
+        .carruselmesas {
+            max-width: 60%;       /* más chico (ejemplo: 70% del ancho de su celda) */
+            max-height: 92%;
+            justify-self: center;  /*centrado dentro de la grilla */
+        }
+    }
+
+    overflow: auto;
+    background-color:$crema;
+    font-family: "Lato", sans-serif;
+    color: $blanco;
+    text-align: center;
+}
+ 
+
+/* ------------------ ABOUT US ------------------ */
+
+.espaciored {
+  padding-left: 4%;
+  padding-right: 4%;
+  text-align: justify;
+
+  .pad1 { padding: 2%; }
+  .pad2 { padding: 2%; }
+
+  .abajocolor {
+    background-color: #7A6B5E;
+    padding-bottom: 2%;
+    padding-right: 2%;
+    padding-left: 2%;
+  }
+}
+
+/* Grid del equipo (independiente de espaciored) */
+.equipocolor {
+  background-color: #7A6B5E;
+  margin-bottom: 2%;
+  display: grid;
+  grid-template-areas:
+    "titulo titulo"
+    "img1 img2"
+    "texto texto";
+  grid-template-columns: 45% 45%;
+  grid-template-rows: 100px 500px 100px;
+  justify-content: center;
+  justify-items: start;
+  align-items: center;
+  gap: 1.5rem;
+  padding-top: 4%;
+
+  .titulo { grid-area: titulo; }
+  .img1   { grid-area: img1; }
+  .img2   { grid-area: img2; }
+  .texto  { 
+    grid-area: texto;
+    padding-top: 6%;
+    padding-bottom: 6%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+}
+
+
+
+
+.tamañoagenda{  /* main de agenda */
+    .oculto1{
+        display: none;
+    }
+
+    width: 100%;
+    border-top: whitesmoke 3px solid;
+    border-bottom: whitesmoke 3px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    padding: 10%;
+
+    form{
+    padding-left: 2%;
+    padding-right: 2%;
+    }
+}
+
+
+h2{
+    padding: 2%;
+    font-family: "Playfair Display", serif;
+    font-weight: lighter;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    padding-top: 6%;
+}
+
+h3{
+    font-family: "Playfair Display", serif;
+    font-size: 1,5rem;
+    letter-spacing: 1px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-weight: lighter;
+}
+
+
+
+
+

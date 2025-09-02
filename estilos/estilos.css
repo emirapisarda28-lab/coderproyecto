@@ -46,7 +46,7 @@ nav li{
 .portfolio .oculto3  {
     display: block; 
 }
-main .oculto1  { 
+main .oculto1  {  ////////////////////////////////////////////////////DEJO PARA EL MAIN
     display: none; 
 } 
 .portfolio .oculto2  { 
@@ -63,7 +63,7 @@ main .oculto1  {
     display: block;
 }
 
-.espaciored .oculto1  { 
+.espaciored .oculto1  { ////////////////////////////////////////////////////MAIN
     display: none; 
 } 
 
@@ -82,7 +82,7 @@ main .oculto1  {
     display: block;
 }
 
-main .oculto4{
+main .oculto4{       /////////////////////////////////////dejo dsp
     display: none;
 }
 
@@ -103,7 +103,7 @@ main .oculto4{
     display: block;
 }
 
-.tamañoagenda .oculto1{
+.tamañoagenda .oculto1{ ///////////////////////////////////////////////main
     display: none;
 }
 
@@ -155,7 +155,7 @@ h1{
 }
 
 
-span{
+div ul li a{ ///////////////////////////////////ver era span
     font-weight: lighter;
     font-size: 1.05rem;
     display: block;
@@ -422,7 +422,7 @@ main{
 
 
 
-.distintocolor{
+.distintocolor{ ////////////////////////////////////////////no aparece
     background-color: #7A6B5E;
 }
 
