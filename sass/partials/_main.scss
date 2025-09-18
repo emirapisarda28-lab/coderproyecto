@@ -1,4 +1,4 @@
-@use "variables" as*;
+@use "variables" as *;
 
 
 main{
@@ -27,6 +27,7 @@ main{
         justify-content: space-evenly;
         align-items: stretch;
         width: 100%;
+
         .min-sec{
             padding: 2%;
             margin: 2%;
@@ -34,6 +35,7 @@ main{
             flex: 1;
             flex-direction: column;
             justify-content: center;
+
 
             .colores{ /*diferenciar con colores arch index*/ 
                 background-color: $cremaosc;
@@ -44,15 +46,9 @@ main{
                 padding-top: 1%;
             }
             
-            .sectores{ /*flex para acomodas las imagenes de los servicios*/
-                display: flex;
-                justify-content: space-evenly;
-                align-items: stretch;
-                width: 100%;
-            }
 
             p{
-                font-size: 1,5rem;
+                font-size: 1rem;
                 line-height: 1.6;  
             }
 
@@ -243,7 +239,7 @@ main{
     .oculto1{
         display: none;
     }
-
+    height: auto;
     width: 100%;
     border-top: whitesmoke 3px solid;
     border-bottom: whitesmoke 3px solid;
@@ -255,9 +251,13 @@ main{
     padding: 10%;
 
     form{
-    padding-left: 2%;
-    padding-right: 2%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        padding: 5%;
+        font-size: 20px;
     }
+
 }
 
 
@@ -272,7 +272,7 @@ h2{
 
 h3{
     font-family: "Playfair Display", serif;
-    font-size: 1,5rem;
+    font-size: 15px;
     letter-spacing: 1px;
     padding-top: 2%;
     padding-bottom: 2%;

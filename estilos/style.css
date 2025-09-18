@@ -55,6 +55,7 @@ a {
   background-image: url(../imagenes/inicio6.jpg);
   background-position: center;
   background-size: 70%;
+  transition: background-image 3s ease-in-out;
 }
 .portfolio .oculto3, .agenda .oculto3, .inicio .oculto3, .aboutus .oculto3 {
   display: block;
@@ -63,16 +64,32 @@ a {
   display: none;
 }
 
+.portfolio:hover, .agenda:hover, .inicio:hover, .aboutus:hover {
+  background-image: url(../imagenes/inicio2.jpg);
+}
+
 .aboutus {
   background-image: url(../imagenes/equipo.jpg);
+}
+
+.aboutus:hover {
+  background-image: url(../imagenes/equipoinici.jpg);
 }
 
 .inicio {
   background-image: url(../imagenes/iniciomobile.jpg);
 }
 
+.inicio:hover {
+  background-image: url(../imagenes/inicio4.jpg);
+}
+
 .agenda {
   background-image: url(../imagenes/agenda.jpg);
+}
+
+.agenda:hover {
+  background-image: url(../imagenes/turno3.jpg);
 }
 
 a {
@@ -107,12 +124,13 @@ footer {
   background-color: #292E1E;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 300;
+  text-align: justify;
 }
 footer div {
   padding-bottom: 5%;
 }
 footer div img {
-  width: 50px;
+  width: 40px;
 }
 
 main {
@@ -159,14 +177,8 @@ main .sectores .min-sec .colores { /*diferenciar con colores arch index*/
 main .sectores .min-sec .espacio {
   padding-top: 1%;
 }
-main .sectores .min-sec .sectores { /*flex para acomodas las imagenes de los servicios*/
-  display: flex;
-  justify-content: space-evenly;
-  align-items: stretch;
-  width: 100%;
-}
 main .sectores .min-sec p {
-  font-size: 1, 5rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 main .sectores .min-sec img {
@@ -333,6 +345,7 @@ main .gridport .carruselmesas {
 }
 
 .tamañoagenda { /* main de agenda */
+  height: auto;
   width: 100%;
   border-top: whitesmoke 3px solid;
   border-bottom: whitesmoke 3px solid;
@@ -347,8 +360,11 @@ main .gridport .carruselmesas {
   display: none;
 }
 .tamañoagenda form {
-  padding-left: 2%;
-  padding-right: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 5%;
+  font-size: 20px;
 }
 
 h2 {
@@ -362,7 +378,7 @@ h2 {
 
 h3 {
   font-family: "Playfair Display", serif;
-  font-size: 1, 5rem;
+  font-size: 15px;
   letter-spacing: 1px;
   padding-top: 2%;
   padding-bottom: 2%;
@@ -371,19 +387,19 @@ h3 {
 
 /* ----------------------------Responsive: en pantallas chicas, 1 columna */
 @media (max-width: 480px) {
-  .portfolio {
+  .portfolio, .inicio, .agenda, .aboutus {
     background-image: none;
   }
-  .portfolio .oculto3 {
+  .portfolio .oculto3, .inicio .oculto3, .agenda .oculto3, .aboutus .oculto3 {
     display: none;
   }
-  .portfolio .oculto {
+  .portfolio .oculto, .inicio .oculto, .agenda .oculto, .aboutus .oculto {
     display: none;
   }
-  .portfolio .oculto2 { /*es para que el logo quede centrado con todo el menú de nav*/
+  .portfolio nav.oculto2, .inicio nav.oculto2, .agenda nav.oculto2, .aboutus nav.oculto2 { /*es para que el logo quede centrado con todo el menú de nav*/
     display: block;
   }
-  .portfolio .oculto2 ul {
+  .portfolio nav.oculto2 ul, .inicio nav.oculto2 ul, .agenda nav.oculto2 ul, .aboutus nav.oculto2 ul {
     display: flex;
     padding: 0.5%;
     gap: 5px;
@@ -394,7 +410,7 @@ h3 {
     font-size: 8px;
     text-align: justify;
   }
-  .portfolio .oculto2 a {
+  .portfolio nav.oculto2 a, .inicio nav.oculto2 a, .agenda nav.oculto2 a, .aboutus nav.oculto2 a {
     color: #7A6B5E; /* pisa el a{color:whitesmoke} global */
     text-decoration: none;
   }
@@ -403,125 +419,66 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(../imagenes/portfolio2.jpg);
     background-size: cover;
     min-height: 500px;
-    gap: 0.75 rem;
+    gap: 0.75rem;
     background-position: center;
-    color: whitesmoke;
+    color: #f5f5f5;
     text-align: center;
     font-family: "Playfair Display", serif;
+    background-image: url(../imagenes/portfolio2.jpg);
   }
   main .oculto1 h1 {
-    color: whitesmoke;
+    color: #f5f5f5;
     text-align: center;
     font-size: 50px;
   }
   main .oculto1 p {
     font-size: 10px;
   }
-  main .borde .arreglo {
-    font-size: 12px;
-  }
-  main .gridport {
-    grid-template-columns: 45%;
-    grid-template-areas: "estilo" "rus-img" "rus-cap" "ele-img" "ele-cap" "boho-img" "boho-cap" "int-img" "int-cap" "momentos" "cer-img" "cer-cap" "det-img" "det-cap" "mesas" "mesa-img" "mesa-cap";
-    justify-content: center;
-  }
-  main .gridport .carruselmesas {
-    max-width: 100%;
-    max-height: 100%;
-    justify-self: center; /*centrado dentro de la grilla*/
-  }
-  main .gridport h2 {
-    font-size: 18px;
-  }
-  main .gridport h3 {
-    font-size: 15px;
-  }
-  main .oculto4 {
+  main .oculto4 { /* index*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(../imagenes/iniciomobile.jpg);
     background-size: cover;
     min-height: 500px;
-    gap: 0.75 rem;
+    gap: 0.75rem;
     background-position: center;
-    color: whitesmoke;
+    color: #f5f5f5;
     text-align: center;
     font-family: "Playfair Display", serif;
+    background-image: url(../imagenes/iniciomobile.jpg);
   }
   main .oculto4 h1 {
-    color: whitesmoke;
+    color: #f5f5f5;
     text-align: center;
     font-size: 50px;
   }
   main .oculto4 p {
     font-size: 10px;
   }
-  main .parrafou {
-    font-size: 13px;
+  .arreglo {
+    font-size: 12px;
   }
-  main .mobile {
+  .gridport {
+    grid-template-columns: 45%;
+    grid-template-areas: "estilo" "rus-img" "rus-cap" "ele-img" "ele-cap" "boho-img" "boho-cap" "int-img" "int-cap" "momentos" "cer-img" "cer-cap" "det-img" "det-cap" "mesas" "mesa-img" "mesa-cap";
+    justify-content: center;
+  }
+  .gridport h2 {
+    font-size: 18px;
+  }
+  .gridport h3 {
     font-size: 15px;
   }
-  main .sectores {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1.5 rem;
-    align-items: stretch;
-    width: 100%;
-  }
-  main .sectores .min-sec {
-    padding: 4%;
-    margin: 6%;
-    border: whitesmoke 2px solid;
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 13px;
-  }
-  main .sectores .min-sec p {
-    font-size: 10px;
-    line-height: 1.6;
-    color: whitesmoke;
-  }
-  main .sectores .min-sec img {
-    width: 150px;
+  .carruselmesas {
+    max-width: 100%;
+    max-height: 100%;
+    justify-self: center; /*centrado dentro de la grilla*/
   }
   /*------------------------------------about us---------------------------------------------------------------------------*/
-  .aboutus {
-    background-image: none;
-  }
-  .aboutus .oculto3 {
-    display: none;
-  }
-  .aboutus .oculto {
-    display: none;
-  }
-  .aboutus .oculto2 {
-    display: block;
-  }
-  .aboutus .oculto2 ul {
-    display: flex;
-    gap: 5px;
-    padding-top: 1%;
-    align-items: center;
-    justify-content: space-evenly; /*justify items es para grid*/
-    flex-direction: row;
-    font-size: 8px;
-    text-align: justify;
-  }
-  .aboutus .oculto2 a {
-    color: #7A6B5E; /* pisa el a{color:whitesmoke} global */
-    text-decoration: none;
-  }
   .espaciored {
-    padding-left: 0%;
-    padding-right: 0%;
     text-align: justify;
   }
   .espaciored .oculto1 {
@@ -529,29 +486,22 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(../imagenes/equipo.jpg);
     background-size: cover;
     min-height: 500px;
-    gap: 0.75 rem;
+    gap: 0.75rem;
     background-position: center;
-    color: whitesmoke;
+    color: #f5f5f5;
     text-align: center;
     font-family: "Playfair Display", serif;
+    background-image: url(../imagenes/equipo.jpg);
   }
   .espaciored .oculto1 h1 {
-    color: whitesmoke;
+    color: #f5f5f5;
     text-align: center;
     font-size: 50px;
   }
   .espaciored .oculto1 p {
     font-size: 10px;
-  }
-  .espaciored .pad1, .espaciored .pad2 {
-    padding: 8%;
-  }
-  .espaciored .abajocolor {
-    background-color: #7A6B5E;
-    padding: 8%;
   }
   .espaciored h2 {
     font-size: 15px;
@@ -562,7 +512,17 @@ h3 {
   .espaciored p {
     font-size: 13px;
   }
-  .espaciored .equipocolor {
+  .pad1, .pad2 {
+    padding: 5%;
+  }
+  .abajocolor {
+    background-color: #7A6B5E;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+  .equipocolor {
     background-color: #7A6B5E;
     margin-bottom: 2%;
     display: grid;
@@ -578,68 +538,40 @@ h3 {
     padding-left: 4%;
   }
   /*------------------------------------------------------------------------INDEX------------------------------------------------------------*/
-  .inicio {
-    background-image: none;
+  .parrafou {
+    font-size: 13px;
   }
-  .inicio .oculto3 {
-    display: none;
+  .mobile {
+    font-size: 15px;
   }
-  .inicio .oculto {
-    display: none;
-  }
-  .inicio .oculto2 { /* es para que el logo  centrado con todo el menu de navegación*/
-    display: block;
-    background-image: none;
-  }
-  .inicio .oculto2 ul {
+  .sectores {
     display: flex;
-    padding: 0.5%;
-    gap: 5px;
-    padding-top: 1%;
-    align-items: center;
-    justify-content: space-evenly; /*justify items es para grid*/
-    flex-direction: row;
-    font-size: 8px;
-    text-align: justify;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: stretch;
+    max-width: 100%;
   }
-  .inicio .oculto2 a {
-    color: #7A6B5E; /* pisa el a{color:whitesmoke} global */
-    text-decoration: none;
+  .sectores .min-sec {
+    margin: 6%;
+    border: #f5f5f5 2px solid;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 13px;
+  }
+  .sectores .min-sec p {
+    font-size: 10px;
+    line-height: 1.6;
+    color: #f5f5f5;
+  }
+  .sectores .min-sec img {
+    max-width: 150px;
   }
   /*--------------------------------------------------------------------agenda------------------------------------------------------------------------------------*/
-  .agenda {
-    background-image: none;
-    padding: 0%;
-    margin: 0%;
-  }
-  .agenda .oculto3 {
-    display: none;
-  }
-  .agenda .oculto {
-    display: none;
-  }
-  .agenda .oculto2 { /* es para que el logo  centrado con todo el menu de navegación*/
-    display: block;
-  }
-  .agenda .oculto2 ul {
-    display: flex;
-    gap: 5px;
-    padding-top: 1%;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: row;
-    font-size: 8px;
-    text-align: justify;
-  }
-  .agenda .oculto2 a {
-    color: #7A6B5E; /* pisa el a{color:whitesmoke} global */
-    text-decoration: none;
-  }
   .tamañoagenda {
     padding: 0%;
     margin: 0%;
-    padding-left: 0%;
-    padding-right: 0%;
     text-align: justify;
   }
   .tamañoagenda .oculto1 {
@@ -647,30 +579,40 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(../imagenes/agenda.jpg);
     background-size: cover;
     min-height: 500px;
     gap: 0.75rem;
     background-position: center;
-    color: whitesmoke;
+    color: #f5f5f5;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    background-image: url(../imagenes/agenda.jpg);
+    background-size: cover;
+    min-height: 600px;
+    gap: 0.75rem;
+    background-position: center;
+    color: #f5f5f5;
     text-align: center;
     font-family: "Playfair Display", serif;
     width: 100%;
   }
-  .tamañoagenda h1 {
-    color: whitesmoke;
+  .tamañoagenda .oculto1 h1 {
+    color: #f5f5f5;
     text-align: center;
     font-size: 50px;
   }
-  .tamañoagenda p {
+  .tamañoagenda .oculto1 p {
     font-size: 10px;
   }
-  .tamañoagenda form {
+  form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
+    margin: 30px;
+  }
+  form label {
+    padding: 5px;
     font-size: 15px;
-    padding: 5%;
   }
   footer {
     font-size: 12px;
@@ -693,6 +635,7 @@ h3 {
   }
   .logo {
     width: 95px;
+    max-width: 80px;
     align-items: flex-start;
   }
   header {
@@ -704,6 +647,258 @@ h3 {
   }
   p {
     font-size: 12px;
+  }
+}
+/*------------------------------TABLET----------------------------------------------------------------------------------------------------*/
+@media (min-width: 481px) and (max-width: 978px) {
+  .portfolio, .inicio, .agenda, .aboutus {
+    background-image: none;
+  }
+  .portfolio .oculto3, .inicio .oculto3, .agenda .oculto3, .aboutus .oculto3 {
+    display: none;
+  }
+  .portfolio .oculto, .inicio .oculto, .agenda .oculto, .aboutus .oculto {
+    display: none;
+  }
+  .portfolio .oculto2, .inicio .oculto2, .agenda .oculto2, .aboutus .oculto2 { /*es para que el logo quede centrado con todo el menú de nav*/
+    display: block;
+  }
+  .portfolio .oculto2 ul, .inicio .oculto2 ul, .agenda .oculto2 ul, .aboutus .oculto2 ul {
+    display: flex;
+    padding: 0.5%;
+    gap: 5px;
+    padding-top: 1%;
+    align-items: center;
+    justify-content: space-evenly; /*justify items es para grid*/
+    flex-direction: row;
+    font-size: 13px;
+    text-align: justify;
+  }
+  .portfolio .oculto2 a, .inicio .oculto2 a, .agenda .oculto2 a, .aboutus .oculto2 a {
+    color: #7A6B5E; /* pisa el a{color:whitesmoke} global */
+    text-decoration: none;
+  }
+  main .oculto1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    min-height: 600px;
+    gap: 0.8rem;
+    background-position: center;
+    color: #f5f5f5;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    background-image: url(../imagenes/portfolio2.jpg);
+  }
+  main .oculto1 h1 {
+    color: #f5f5f5;
+    text-align: center;
+    font-size: 60px;
+  }
+  main .oculto1 p {
+    font-size: 18px;
+  }
+  main .oculto4 { /* index*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    min-height: 600px;
+    gap: 0.8rem;
+    background-position: center;
+    color: #f5f5f5;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    background-image: url(../imagenes/iniciomobile.jpg);
+  }
+  main .oculto4 h1 {
+    color: #f5f5f5;
+    text-align: center;
+    font-size: 60px;
+  }
+  main .oculto4 p {
+    font-size: 18px;
+  }
+  .arreglo {
+    font-size: 15px;
+  }
+  .gridport {
+    grid-template-columns: 45%;
+    grid-template-areas: "estilo" "rus-img" "rus-cap" "ele-img" "ele-cap" "boho-img" "boho-cap" "int-img" "int-cap" "momentos" "cer-img" "cer-cap" "det-img" "det-cap" "mesas" "mesa-img" "mesa-cap";
+    justify-content: center;
+  }
+  .gridport h2 {
+    font-size: 20px;
+  }
+  .gridport h3 {
+    font-size: 18px;
+  }
+  .carruselmesas {
+    max-width: 100%;
+    max-height: 100%;
+    justify-self: center; /*centrado dentro de la grilla*/
+  }
+  /*------------------------------------about us---------------------------------------------------------------------------*/
+  .espaciored {
+    text-align: justify;
+  }
+  .espaciored .oculto1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    min-height: 600px;
+    gap: 0.8rem;
+    background-position: center;
+    color: #f5f5f5;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    background-image: url(../imagenes/equipo.jpg);
+  }
+  .espaciored .oculto1 h1 {
+    color: #f5f5f5;
+    text-align: center;
+    font-size: 60px;
+  }
+  .espaciored .oculto1 p {
+    font-size: 18px;
+  }
+  .espaciored h2 {
+    font-size: 24px;
+  }
+  .espaciored ul {
+    font-size: 18px;
+  }
+  .espaciored p {
+    font-size: 18px;
+  }
+  .pad1, .pad2 {
+    padding: 8%;
+  }
+  .abajocolor {
+    background-color: #7A6B5E;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  .equipocolor {
+    background-color: #7A6B5E;
+    margin-bottom: 2%;
+    display: grid;
+    grid-template-areas: "titulo titulo" "img1 img1" "img2 img2" "texto texto";
+    grid-template-columns: 45% 45%;
+    grid-template-rows: 100px 500px 500px 100px;
+    justify-content: center;
+    justify-items: self-start;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 3%;
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+  /*------------------------------------------------------------------------INDEX------------------------------------------------------------*/
+  .parrafou {
+    font-size: 18px;
+  }
+  .mobile {
+    font-size: 18px;
+  }
+  .sectores {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.8rem;
+    align-items: stretch;
+    max-width: 100%;
+  }
+  .sectores .min-sec {
+    margin: 8%;
+    border: #f5f5f5 2px solid;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 18px;
+  }
+  .sectores .min-sec p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #f5f5f5;
+  }
+  .sectores .min-sec img {
+    max-width: 240px;
+  }
+  /*--------------------------------------------------------------------agenda------------------------------------------------------------------------------------*/
+  .tamañoagenda {
+    padding: 0%;
+    margin: 0%;
+    text-align: justify;
+  }
+  .tamañoagenda .oculto1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    min-height: 600px;
+    gap: 0.8rem;
+    background-position: center;
+    color: #f5f5f5;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    background-image: url(../imagenes/agenda.jpg);
+    width: 100%;
+  }
+  .tamañoagenda .oculto1 h1 {
+    color: #f5f5f5;
+    text-align: center;
+    font-size: 60px;
+  }
+  .tamañoagenda .oculto1 p {
+    font-size: 18px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    margin: 37px;
+  }
+  form label {
+    padding: 8px;
+    font-size: 17px;
+  }
+  footer {
+    font-size: 17px;
+  }
+  footer h2 {
+    font-size: 24px;
+  }
+  footer div {
+    padding-bottom: 7%;
+  }
+  footer img {
+    width: 30px;
+  }
+  /*--------------------------------------------------------------para todos----------------------------------------------------------------------------------------*/
+  .logo {
+    width: 120px;
+    max-width: 110px;
+    align-items: flex-start;
+  }
+  header {
+    height: 80px;
+    text-align: center;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  p {
+    font-size: 18px;
+    padding: 6%;
   }
 }
 

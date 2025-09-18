@@ -1,4 +1,4 @@
-@use "variables" as*;
+@use "variables" as *;
 
 *{
     margin: 0%;
@@ -47,16 +47,17 @@ header{
 
 }
 
- a{
+a{
     color: $blanco;
     font-family: $fontlink;
     text-decoration: none;
- }
+}
 
 .portfolio{ 
   background-image: url(../imagenes/inicio6.jpg); //arreglar navegación
   background-position: center;
   background-size: 70%;
+  transition: background-image 3s ease-in-out;
 
   .oculto3{
     display: block;
@@ -67,9 +68,18 @@ header{
   }
 }
 
+.portfolio:hover {
+    background-image: url(../imagenes/inicio2.jpg);
+}
+
 .aboutus{
     @extend .portfolio;
     background-image:url(../imagenes/equipo.jpg) ;
+
+}
+
+.aboutus:hover {
+    background-image: url(../imagenes/equipoinici.jpg)
 }
 
 .inicio{
@@ -77,11 +87,18 @@ header{
     background-image:url(../imagenes/iniciomobile.jpg) ;
 }
 
+.inicio:hover{ 
+    background-image: url(../imagenes/inicio4.jpg)
+}
+
 .agenda{
     @extend .portfolio;
     background-image:url(../imagenes/agenda.jpg) ;
 }
 
+.agenda:hover{
+    background-image: url(../imagenes/turno3.jpg);
+}
 a{
     color: $blanco;
     font-family: $fontlink;
@@ -114,12 +131,13 @@ footer{
     background-color: $verde;
     font-family: $fontlink;
     font-weight: 300;
+    text-align: justify;
 
     div{
         padding-bottom: 5%;
         
         img{
-            width: 50px;
+            width: 40px;
         }
     }
 
