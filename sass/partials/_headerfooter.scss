@@ -73,18 +73,18 @@ a{
 }
 
 .aboutus{
+    background-image:url(../imagenes/equipo.jpg);
     @extend .portfolio;
-    background-image:url(../imagenes/equipo.jpg) ;
 
 }
 
 .aboutus:hover {
-    background-image: url(../imagenes/equipoinici.jpg)
+    background-image: url(../imagenes/equipoinici.jpg);
 }
 
 .inicio{
+    background-image:url(../imagenes/iniciomobile.jpg);
     @extend .portfolio;
-    background-image:url(../imagenes/iniciomobile.jpg) ;
 }
 
 .inicio:hover{ 
@@ -92,8 +92,9 @@ a{
 }
 
 .agenda{
+    background-image:url(../imagenes/agenda.jpg);
     @extend .portfolio;
-    background-image:url(../imagenes/agenda.jpg) ;
+
 }
 
 .agenda:hover{
